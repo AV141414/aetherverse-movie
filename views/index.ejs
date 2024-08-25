@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Aetherverse Streaming</title>
+  <link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+  <div class="container">
+    <h1>Welcome to Aetherverse Streaming</h1>
+    <form action="/search" method="get">
+      <input type="text" name="title" placeholder="Search for a movie by title" required>
+      <button type="submit">Search</button>
+    </form>
+
+    <h2>Recent Famous Movies</h2>
+    <ul>
+      <% recentMovies.forEach(movie => { %>
+        <li>
+          <strong><%= movie.title %></strong><br>
+          <%= movie.description %><br>
+          <a href="/movie/<%= movie.id %>">Watch Now</a>
+        </li>
+      <% }); %>
+    </ul>
+  </div>
+  <footer>
+    Aetherverse Streaming &copy; 2024
+  </footer>
+</body>
+</html>

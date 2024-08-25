@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Watch <%= movieTitle %> - Aetherverse Streaming</title>
+  <link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+  <div class="container movie-page">
+    <h1>Watch <%= movieTitle %></h1>
+    <div class="movie-page-content">
+      <iframe src="https://multiembed.mov/?video_id=<%= movieId %><%= isTmdb ? '&tmdb=1' : '' %>" frameborder="0" allowfullscreen></iframe>
+      <a class="watch-button" href="/">Back to Home</a>
+    </div>
+  </div>
+</body>
+</html>

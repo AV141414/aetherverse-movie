@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Watch <%= movieTitle %> - Season <%= season %>, Episode <%= episode %> - Aetherverse Streaming</title>
+</head>
+<body>
+  <div class="container">
+    <h1>Watch <%= movieTitle %> - Season <%= season %>, Episode <%= episode %></h1>
+    <iframe src="https://multiembed.mov/?video_id=<%= episodeId %><%= isTmdb ? '&tmdb=1' : '' %>&s=<%= season %>&e=<%= episode %>" width="800" height="450" frameborder="0" allowfullscreen></iframe>
+    <a href="/">Back to Home</a>
+  </div>
+</body>
+</html>
